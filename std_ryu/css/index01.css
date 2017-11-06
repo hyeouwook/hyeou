@@ -1,0 +1,81 @@
+/* 폰트 라이브러리 불러오기 */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* 폰트 라이브러리 불러오기 */
+
+/* 폰트 라이브러리 사용하기 */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* 폰트 라이브러리 사용하기 */
+
+/* 노말라이즈 */
+body, ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+a {
+    color:inherit;
+    text-decoration:inherit;
+}
+/* 노말라이즈 */
+
+.top-menu {
+    max-width:980px;
+    margin: 0 auto;
+}
+
+/* 1차 메뉴 아이템이 float이라서 부모가 대가를 치른다. => 희생적인 막내를 추가한다. */
+.top-menu > ul::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/* 1차 메뉴 아이템 */
+.top-menu > ul > li {
+    float:left;
+    /* 너비를 1/7 로 만든다. */
+    width:14.28571%;
+    /* 좌, 우 보더(유령)을 가둘 집으로 만든다. */
+    position:relative;
+}
+
+/* 1차 메뉴 아이템의 좌, 우 보더를 만든다. */
+.top-menu > ul > li::before, .top-menu > ul > li::after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:1px;
+    height:100%;
+    background-color:black;
+}
+
+/* 우 보더는 우측으로 붙인다. */
+.top-menu > ul > li::after {
+    left:auto;
+    right:0;
+}
+
+/* 첫번재 1차메뉴아이템의 before와, 마지막 1차메뉴아이템의 after를 선택한다. */
+.top-menu > ul > li:first-child::before, .top-menu > ul > li:last-child::after {
+    width:2px;
+}
+
+/* 1차 메뉴 아이템의 텍스트 */
+.top-menu > ul > li > a {
+    display:block;
+    text-align:center;
+}
+
+/* 서브메뉴는 숨긴다. */
+.top-menu ul ul {
+    display:none;
+}
+
+/* 마우스가 올려진 메뉴아이템의 자식인 메뉴는 보여준다. */
+.top-menu li:hover > ul {
+    display:block;
+}

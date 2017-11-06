@@ -1,0 +1,23 @@
+body {
+    margin:0;
+    padding:0;
+}
+section {
+    height:80vh;
+}
+section > div {
+    float:left;
+    width:25%;
+    height:100%;
+    border:10px solid gold;
+    box-sizing:border-box;
+    transition:background-color 1s;
+}
+section::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+section > div.active {
+    background-color:green;
+}
