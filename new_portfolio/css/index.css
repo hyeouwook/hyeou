@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700');
 /*Reset css*/
 *{ margin: 0; padding:0; }
 ol,ul { list-style: none; }
@@ -109,7 +109,7 @@ section {
 section.on {
 	transform: rotateY(-10deg);
 }
-section >div {
+section > div {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -118,11 +118,11 @@ section >div {
 	perspective: 700px;
 	transition: all 1.5s;
 }
-section >div.on {
+section > div.on {
 	z-index: 2;
 	opacity: 1;
 }
-section >div>p {
+section > div > p {
 	box-sizing: border-box;
 	text-align: center;
 	overflow: hidden;
@@ -136,14 +136,14 @@ width: 100%; top: 50%; margin-top: -10px; font-size: 20px; color: #eee; }
 section >div >p >strong { display: block; text-align: center; position: absolute;
 width: 100%; top: 50%; font-size: 50px; color: #fff; margin-top: -25px; }
 /*아이콘 설정*/
-section >div >p >em >a >i { font-size: 30px!important; color: #eee; margin:0px 15px;
+section > div > p > em > a > i { font-size: 30px!important; color: #eee; margin:0px 15px;
 position: relative; top: 50%; margin-top:-15px; opacity: 0.5%; transition: all 0.5s; }
-section >div >p >em >a >i:hover { transform: scale(1.2); opacity: 1; }
+section > div > p > em > a > i:hover { transform: scale(1.2); opacity: 1; }
 
 /*box_01*/
 .box_01 > p{ height: 25%; float: left; text-align: center; position: relative; }
 .box_01 > p:nth-child(1) { width: 50%; background-color: #333; }
-.box_01 > p:nth-child(2) { border:1px solid red; width: 25%; background: #ccc; background: url(../img/night11.png) no-repeat right center; background-size: 100%; }/*background-size: cover;*/
+.box_01 > p:nth-child(2) { width: 25%; background-color: #d2d2d2; /*background: url() no-repeat right center;*/ background-size: 100%; }/*background-size: cover;*/
 .box_01 > p:nth-child(3) { width: 25%; background: #444; }
 .box_01 > p:nth-child(3) ul { position: absolute; top: 50%; }
 .box_01 > p:nth-child(4) { width: 50%; height: 50%; background: url() no-repeat center top; background-size: cover; float: right; }
